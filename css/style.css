@@ -1,0 +1,1004 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+      font-family: "Trebuchet MS", "Segoe UI", Arial, sans-serif;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f9ff;
+}
+
+/* ===========================
+   Navbar
+=========================== */
+
+ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0d6efd;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+
+ul li{
+    list-style: none;
+}
+
+ul li a{
+    display: block;
+    padding: 18px 22px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    border-bottom: 3px solid transparent;
+    transition: .3s;
+}
+
+ul li:hover{
+    background-color: #fff;
+}
+
+ul li:hover a{
+    color: #0d6efd;
+    border-bottom: 3px solid #20c997;
+}
+
+/* ===========================
+   Main Section
+=========================== */
+
+main{
+    flex: 1;
+    background-color: #f4f9ff;
+    
+    
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+/* ===========================
+   Forms
+=========================== */
+
+.signup-form,
+.login-form,.add{
+    width: 400px;
+    background-color: #f7f7f7;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+
+ 
+}
+
+.add{
+     justify-content: center;
+    align-items: center;
+      margin: 20px auto;
+      margin-top: 70px;
+    display: flex;
+    flex-direction: column; 
+    
+}
+.signup-form h2,
+.login-form h2 {
+    text-align: center;
+    color: #0d6efd;
+    margin-bottom: 25px;
+    font-size: 30px;
+    border-bottom: 3px solid #20c997;
+    padding-bottom: 10px;
+}
+
+/* ===========================
+   Inputs
+=========================== */
+
+.signup-form input,
+.login-form input,.search-form input,.add input{
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 15px;
+    transition: .3s;
+}
+
+.signup-form input:focus,
+.login-form input:focus,.search-form input:focus,.add input:focus   {
+    border-color: #0d6efd;
+    box-shadow: 0 0 8px rgba(13,110,253,.25);
+}
+
+/* ===========================
+   Buttons
+=========================== */
+
+.signup-form button,
+.login-form button, .add button{
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background-color: #0d6efd;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.signup-form button:hover,
+.login-form button:hover,.search button:hover, .add button:hover {
+    background-color: #0b5ed7;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(13,110,253,.35);
+}
+
+/* ===========================
+   Error Message
+=========================== */
+
+.login-form .error,
+.signup-form .error,
+.error{
+     width: 100%;
+    margin: 20px auto;
+    background-color: #ffe6e6;
+    color: #d63031;
+    border: 1px solid #d63031;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+}
+
+
+
+/* ===========================
+   Links
+=========================== */
+
+.signup-form p,
+.login-form p{
+    text-align: center;
+    margin-top: 18px;
+    color: #555;
+}
+
+.signup-form p a,
+.login-form p a{
+    color: #0d6efd;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-form p a:hover,
+.login-form p a:hover{
+    color: #20c997;
+    text-decoration: underline;
+}
+
+/* ===========================
+   Profile Page Layout
+=========================== */
+ 
+
+ 
+main.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+    justify-content: center; 
+    gap: 25px;
+     flex: 1;  
+
+}
+
+
+ 
+/* ===========================
+   Profile Box
+=========================== */
+ 
+.profile-box{
+    width: 520px;
+    background-color: #fff;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    text-align: left;
+    margin-top:20px;
+}
+ 
+.profile-medicines{
+    display: block;
+    text-align: center;
+}
+ 
+.profile-medicines h2{
+    color: #0d6efd;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #20c997;
+    padding-bottom: 10px;
+}
+ 
+.profile-medicines p{
+    color: #666;
+}
+
+ 
+.profile-pic{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+ 
+.profile-pic-placeholder{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #20c997;
+    color: #fff;
+    font-size: 42px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    flex-shrink: 0;
+}
+ 
+.profile-info p{
+    font-size: 18px;
+    font-weight: bold;
+    color: #0d0d0e;
+    margin-bottom: 6px;
+}
+ 
+.profile-info p span{
+    color: #0c0c0e;
+    margin-right: 4px;
+}
+ 
+.profile-actions{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    margin-top: 14px;
+}
+ 
+.profile-actions a,
+.full-width{
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: .3s;
+}
+ 
+.edit-btn{
+    background-color: #20c997;
+    color: #fff;
+}
+ 
+.edit-btn:hover{
+    background-color: #17a679;
+}
+ 
+.delete-btn{
+    background-color: #d63031;
+    color: #fff;
+}
+ 
+.delete-btn:hover{
+    background-color: #b82727;
+}
+
+/* ===========================
+   Purchase History 
+=========================== */
+
+.profile-medicines{
+    width: 750px;
+    max-width: 95%;
+    text-align: left;
+}
+
+.profile-medicines h2{
+    text-align: center;
+}
+
+.profile-medicines .display{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    text-align: left;
+    padding: 18px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-medicines .display:last-child{
+    border-bottom: none;
+}
+
+.profile-medicines .display img{
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+
+.profile-medicines .productdata h3{
+    font-weight: normal;
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 4px;
+}
+ 
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+    background-color: #0b3d91;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-size: 15px;
+}
+
+
+/*
+search
+
+
+*/
+
+.search-form button{
+    width: 90px;
+    height:45px;
+    padding: 5px;
+    
+    border: none;
+    border-radius: 8px;
+    background-color: #0d6efd;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.search{
+    width: 95;
+    background-color: #fff;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: ; */
+    /* align-items: center; */
+    gap:10px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+    transition: 0.5;
+    margin: 20px;
+
+  
+}
+
+.productdata button{
+color:white;
+padding:10px 5px;
+width:80px;
+border: none;
+text-align: center;
+border-radius: 10px;
+background-color: green;
+cursor: pointer;
+
+}
+
+.productdata button:hover{
+transform: translateY(-3px);
+background-color: rgb(52, 154, 52);
+
+}
+.display{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    gap: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    transition:0.4s;
+    margin-left: 20px;
+    /* display: flex; */
+
+}
+
+.display:hover{
+
+transform: translateY(-5px) scale(1.03);
+}
+
+.display img{
+    width: 130px;
+    height: 130px;
+    transition:0.5s;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-left: 5px;
+}
+
+.display img:hover{
+transform: scale(1.3);
+
+}
+.productdata h3{
+    font-size: 16px;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+.signup-form select,
+.login-form select,
+.add select{
+    width:100%;
+    padding:14px;
+    margin-bottom:18px;
+    border:1px solid #dcdcdc;
+    border-radius:8px;
+    outline:none;
+    font-size:15px;
+    background-color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+
+.signup-form select:focus,
+.login-form select:focus,
+.add select:focus{
+    border-color:#0d6efd;
+    box-shadow:0 0 8px rgba(13,110,253,.25);
+}
+
+main.main-top {
+    align-items: flex-start;
+}
+.text-center i{
+    font-size: 20px;
+    color:rgb(175, 16, 16);
+}
+.review-box{
+    display:block;
+    width:750px;
+    max-width:95%;
+    margin-bottom: 20px;
+}
+
+.review-box h2{
+    color:#0d6efd;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.review-box textarea{
+    width:100%;
+    height:140px;
+    resize:none;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:15px;
+    font-size:16px;
+    outline:none;
+    margin-bottom:20px;
+}
+
+.review-box textarea:focus{
+    border-color:#0d6efd;
+}
+
+.review-box button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:8px;
+    background:#0d6efd;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+}
+
+.review-box button:hover{
+    background:#0b5ed7;
+}
+
+
+.profile-medicines p{
+    margin-top:10px;
+    margin-bottom:10px;
+    color:#444;
+    font-size:16px;
+}
+
+.profile-medicines small{
+    color:gray;
+}
+
+/* Salma */
+
+/* ===========================
+   Home Page
+=========================== */
+
+/* .home{
+    background:linear-gradient(135deg,#0d6efd,#20c997);
+    color:white;
+    min-height:85vh;
+    display:flex;
+    align-items:center;
+    padding:80px 0;
+}
+
+.home-content{
+    width:min(1200px,90%);
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+}
+
+.home-text{
+    flex:1;
+}
+
+.home-text h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.home-text p{
+    color:#eef5ff;
+    font-size:20px;
+    margin-bottom:35px;
+}
+
+.home-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.home-image{
+    flex:1;
+    text-align:center;
+}
+
+.home-image img{
+    width:100%;
+    max-width:480px;
+} */
+
+/* ===========================
+   Home Page Layout
+=========================== */
+
+.home-page{
+    display:block;
+    width:100%;
+}
+
+.section-content{
+    width:min(1200px,90%);
+    margin:auto;
+}
+
+.features,
+.reviews,
+.faq,
+.cta{
+    padding:80px 20px;
+}
+
+.features h2,
+.reviews h2,
+.faq h2,
+.cta h2{
+    text-align:center;
+    margin-bottom:45px;
+    font-size:42px;
+}
+
+/* ---------- Hero ---------- */
+
+.home{
+    background:linear-gradient(135deg,#0d6efd,#20c997);
+    color:white;
+    min-height:85vh;
+    display:flex;
+    align-items:center;
+}
+
+.home-content{
+    width:min(1200px,90%);
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+}
+
+.home-text{
+    flex:1;
+}
+
+.home-text h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+
+.home-text p{
+    color:#eef5ff;
+    font-size:20px;
+    margin-bottom:35px;
+}
+
+.home-buttons{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn-primary,
+.btn-secondary{
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:40px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:white;
+    color:#0d6efd;
+}
+
+.btn-primary:hover{
+    transform:translateY(-4px);
+}
+
+.btn-secondary{
+    border:2px solid white;
+    color:white;
+}
+
+.btn-secondary:hover{
+    background:white;
+    color:#0d6efd;
+}
+
+.home-image{
+    flex:1;
+    text-align:center;
+}
+
+.home-image img{
+    width:100%;
+    max-width:480px;
+}
+
+/* ---------- Search Preview ---------- */
+
+/* .search-preview{
+    background:white;
+}
+
+.search-preview p{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.search-preview form{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.search-preview input{
+    width:420px;
+    max-width:100%;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.search-preview button{
+    padding:15px 35px;
+    background:#0d6efd;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.search-preview button:hover{
+    background:#0b5ed7;
+} */
+
+/* ---------- About ---------- */
+
+.about{
+    background:#f4f9ff;
+}
+
+.about p{
+    max-width:850px;
+    margin:auto;
+    text-align:center;
+    font-size:18px;
+}
+
+/* ---------- Cards ---------- */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-top:45px;
+}
+
+.card{
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+/* .card .icon{
+    font-size:45px;
+    margin-bottom:20px;
+} */
+
+.card h3{
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+.icon{
+    font-size:45px;
+    color:#0d6efd;
+    margin-bottom:20px;
+}
+
+.icon i{
+    transition:.3s;
+}
+
+.card:hover .icon i{
+    color:#20c997;
+    transform:scale(1.15);
+}
+
+/* ---------- Reviews ---------- */
+
+.reviews{
+    background:#fff;
+}
+
+.reviews .display{
+    display:flex;
+    align-items:flex-start;
+    gap:20px;
+    background:#f8fbff;
+    padding:20px;
+    border-radius:15px;
+    margin-bottom:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+.reviews .display:hover{
+    transform:translateY(-5px);
+}
+
+.reviews img,
+.reviews .profile-pic-placeholder{
+    width:80px;
+    height:80px;
+    border-radius:50%;
+    flex-shrink:0;
+}
+
+.reviews img{
+    object-fit:cover;
+}
+
+.reviews .productdata h3{
+    margin-bottom:10px;
+}
+
+.reviews small{
+    color:#777;
+}
+
+/* ---------- FAQ ---------- */
+
+.faq{
+    background:#f4f9ff;
+}
+
+.faq-item{
+    background:white;
+    margin-bottom:18px;
+    border-radius:12px;
+    padding:22px 28px;
+    box-shadow:0 5px 15px rgba(0,0,0,.06);
+}
+
+.faq-item h3{
+    color:#0d6efd;
+    margin-bottom:10px;
+}
+
+/* ---------- CTA ---------- */
+
+.cta{
+    background:#0d6efd;
+    color:white;
+    text-align:center;
+}
+
+.cta h2{
+    color:white;
+}
+
+.cta p{
+    color:#eef5ff;
+    max-width:700px;
+    margin:20px auto 35px;
+}
+
+.cta .btn-primary{
+    display:inline-block;
+    background:white;
+    color:#0d6efd;
+}
+
+/* ---------- Responsive ---------- */
+
+@media(max-width:900px){
+
+.home-content{
+    flex-direction:column-reverse;
+    text-align:center;
+}
+
+.home-text h1{
+    font-size:42px;
+}
+
+.home-buttons{
+    justify-content:center;
+}
+
+.home-image img{
+    max-width:350px;
+}
+
+}
+
+@media(max-width:600px){
+
+.home-text h1{
+    font-size:34px;
+}
+
+section h2{
+    font-size:28px;
+}
+
+.search-preview form{
+    flex-direction:column;
+    align-items:center;
+}
+
+.search-preview button{
+    width:100%;
+    max-width:420px;
+}
+
+}
+
+/* End Salma's section */
+
+/* admin profile*/
+
+.admin_image{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: #0c0c0e;
+    width:75f0px;
+    height:300px;
+}
+
+
+
+.del button{
+    border-radius: 15px;
+    width:150px;
+    background-color: #d63031;
+    color:white;
+    padding:10px;
+    border: none;
+}
+
+
+
+.del{
+    width:400px;
+    background:white;
+    padding:30px;
+    
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+.del select{
+    padding:12px;
+    border-radius:8px;
+}
+.del form{
+display: flex;
+    gap:20px;
+}
+
+
+.admin-top{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+    width:100%;
+}
